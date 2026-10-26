@@ -1,0 +1,28 @@
+# Local environments, secrets, and caches
+.env
+.env.*
+!.env.example
+.venv/
+.cache/
+.pytest_cache/
+.pi-subagents/
+__pycache__/
+*.py[cod]
+
+# Training data and checkpoints; release packs are published as assets
+/data/*
+!/data/tokenizer.json
+!/data/mix_manifest.json
+/checkpoints/
+/archives/
+/outputs/
+
+# Built binaries
+/c_infer/ll3m_c*
+/c_infer/multi_bench
+*.o
+*.so
+
+# Paper build logs
+/docs/paper/*.log
+/docs/paper/*.blg

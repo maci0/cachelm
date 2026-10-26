@@ -1,0 +1,31 @@
+[project]
+name = "ll3m"
+version = "0.1.0"
+description = "LL3M: an LLM that lives in L3 (v2 RoPE/GQA/SwiGLU/BPE; C serve fits one CCD)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "torch>=2.2",
+]
+
+[project.scripts]
+ll3m-train = "ll3m.train:main"
+ll3m-generate = "ll3m.generate:main"
+ll3m-eval = "ll3m.eval:main"
+ll3m-chat = "ll3m.chat:main"
+ll3m-semcomp = "ll3m.semcomp.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ll3m"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

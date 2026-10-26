@@ -1,0 +1,55 @@
+{
+  "target_model": "75M L27 d512 h8/kv1",
+  "story_sources": [
+    "/home/maci/Desktop/ll3m/data/TinyStoriesV2-GPT4-train.partial.txt"
+  ],
+  "story_source_bytes": [
+    1610612736
+  ],
+  "shakespeare": "data/tinyshakespeare.txt",
+  "val_source": "/home/maci/Desktop/ll3m/data/TinyStoriesV2-GPT4-valid.txt",
+  "vocab_size": 2048,
+  "shakespeare_ratio": 0.05,
+  "shakespeare_chars": 82520490,
+  "min_chars": 120,
+  "max_chars": 4000,
+  "bpe_train_chars": 40000000,
+  "bpe_sample_chars": 40000000,
+  "seed": 42,
+  "quality": {
+    "enabled": true,
+    "min_printable": 0.98,
+    "max_word_repeat": 0.18,
+    "require_sentence_end": true,
+    "load_stats": {
+      "kept": 1949020,
+      "no_end": 10588,
+      "repeat": 5505,
+      "short": 224,
+      "bigram_repeat": 124,
+      "long_trim": 242
+    },
+    "dedup_dropped": 0,
+    "train_val_leak_removed": 0
+  },
+  "train_stories": 1949020,
+  "val_stories": 27400,
+  "train_chars": 1650409660,
+  "val_chars": 21904765,
+  "train_tokens": 466487919,
+  "val_tokens": 6005456,
+  "chars_per_tok_train": 3.537947271041761,
+  "chars_per_tok_val": 3.647477393889823,
+  "train_length_hist": {
+    "0-200": 84,
+    "200-500": 75329,
+    "500-1k": 1615451,
+    "1k-2k": 225499,
+    "2k-4k": 32657,
+    "4k+": 0
+  },
+  "train_story_chars_mean": 802.4500918410278,
+  "train_story_chars_median": 721.0,
+  "note": "TinyStories-primary product mix rebuild. NOT the denser knowledge ladder. For denser-C (~161M train tokens) see data/base_en_dense/manifest.json and checkpoints/dense_pipeline/pipeline.log. target_model string below may be stale.",
+  "not_dense_ladder": true
+}

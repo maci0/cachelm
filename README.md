@@ -18,6 +18,20 @@ dense lessons), optional partial RoPE / logit softcap / z-loss, small domain
 **Default serve quant:** **ternary** 2-bit packed Linears (`-DCLM_QUANT=2`).  
 Legacy char GPT-2 models remain as `arch=v1` / int8 optional.
 
+### Download trained models
+
+The [v76 release](https://github.com/maci0/cachelm/releases/tag/v76) contains the
+product agent and SciQ model packs, with matching tokenizers and metadata.
+From the repository root, download and extract the agent pack:
+
+```bash
+gh release download v76 --repo maci0/cachelm --pattern 'cachelm-v76-agent.tar.gz'
+tar -xzf cachelm-v76-agent.tar.gz
+```
+
+This restores `checkpoints/v76_dense_c_pure_v2/best.ll3m` and its tokenizer.
+See [the ship freeze](docs/SHIP_FREEZE.md) for the two packs and measured limits.
+
 ### Docs
 
 | Doc | Topic |
